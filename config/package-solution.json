@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "container-info-central-axity-client-side-solution",
+    "id": "b92ea740-38da-4734-ac51-fbd51fd0f832",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.17.4"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "container-info-central-axity description"
+      },
+      "longDescription": {
+        "default": "container-info-central-axity description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "container-info-central-axity Feature",
+        "description": "The feature that activates elements of the container-info-central-axity solution.",
+        "id": "8f9f2e9d-9fa3-4972-a02f-a42440809b15",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/container-info-central-axity.sppkg"
+  }
+}
