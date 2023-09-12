@@ -1,9 +1,11 @@
-import { Version } from '@microsoft/sp-core-library';
-import { IPropertyPaneConfiguration } from '@microsoft/sp-property-pane';
-import { BaseClientSideWebPart } from '@microsoft/sp-webpart-base';
-import { IReadonlyTheme } from '@microsoft/sp-component-base';
+import { Version } from "@microsoft/sp-core-library";
+import { IPropertyPaneConfiguration } from "@microsoft/sp-property-pane";
+import { BaseClientSideWebPart } from "@microsoft/sp-webpart-base";
+import { IReadonlyTheme } from "@microsoft/sp-component-base";
+import { ICardInfoProps } from "./components/IContainerInfoCentralAxityProps";
 export interface IContainerInfoCentralAxityWebPartProps {
     description: string;
+    collectionData: ICardInfoProps[];
 }
 export default class ContainerInfoCentralAxityWebPart extends BaseClientSideWebPart<IContainerInfoCentralAxityWebPartProps> {
     private _isDarkTheme;

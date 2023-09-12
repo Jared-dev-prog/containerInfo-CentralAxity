@@ -6,33 +6,28 @@ import CardInfo from "./CardInfo";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const ContainerInfoCentralAxity: React.FC<IContainerInfoCentralAxityProps> = (props) => {
-  const cards = [
-    {
-      title: "Arquitectura ",
-      text: "Evaluamos, analizamos y definimos modelos de arquitectura que permitirán a nuestros clientes definir un rumbo tecnológico y de diseño de aplicaciones",
-      lengthCard: "col-3",
-    },
-    {
-      title: "Arquitectura ",
-      text: "Evaluamos, analizamos y definimos modelos de arquitectura que permitirán a nuestros clientes definir un rumbo tecnológico y de diseño de aplicaciones",
-      lengthCard: "col-3",
-    },
-    {
-      title: "Arquitectura ",
-      text: "Evaluamos, analizamos y definimos modelos de arquitectura que permitirán a nuestros clientes definir un rumbo tecnológico y de diseño de aplicaciones",
-      lengthCard: "col-3",
-    },
-    {
-      title: "Arquitectura ",
-      text: "Evaluamos, analizamos y definimos modelos de arquitectura que permitirán a nuestros clientes definir un rumbo tecnológico y de diseño de aplicaciones",
-      lengthCard: "col-3",
-    },
-  ];
+  const { collectionData } = props;
+
   return (
     <div className={`row ${styles.container}`}>
-      {cards.map((item, index) => (
-        <CardInfo title={item.title} text={item.text} lengthCard={item.lengthCard} key={index} />
-      ))}
+      {collectionData !== undefined ? (
+        collectionData.map((item, index) => (
+          <CardInfo
+            title={item.title}
+            text={item.text}
+            lengthCard={item.lengthCard}
+            key={index}
+            link={item.link}
+            typeOpen={item.typeOpen}
+          />
+        ))
+      ) : (
+        <div>
+          <p className={styles.warning__text}>
+            No existen elementos, empieze a editar el componente para agregarlos.
+          </p>
+        </div>
+      )}
     </div>
   );
 };

@@ -8,8 +8,15 @@
 }
 
 .background_card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   border-radius: 10px;
   padding: 18px;
+  height: 250px;
+  min-height: 250px;
+  background-color: #fff;
+  color: #fff;
 }
 
 .font_size {
@@ -18,13 +25,55 @@
 
 .title {
   color: #f4364c;
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 700;
+}
+
+.container__text {
+  overflow: auto;
+}
+
+.container__text::-webkit-scrollbar {
+  background: #ccc;
+  border-radius: 0 10px 10px 0;
+  height: 8px;
+  overflow-y: scroll;
+  width: 8px;
+}
+
+.container__text::-webkit-scrollbar-thumb {
+  background: #3c1053;
+  border-radius: 5px;
 }
 
 .text {
   color: #3c1053;
-  font-size: 20px;
+  font-size: 17px;
   line-height: 28px;
-  font-weight: 700;
+  text-align: left;
+}
+
+.warning__text {
+  border-left: 4px solid red;
+  margin: 0 auto;
+  padding: 5px 0px 5px 10px;
+  background: #f7d4d4;
+  color: #cf0707;
+}
+
+.cursor_pointer {
+  cursor: pointer;
+}
+
+.button {
+  background-color: #3c1053;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 10px;
+  margin-top: 20px;
+
+  a {
+    color: #fff;
+    font-weight: 700;
+  }
 }
